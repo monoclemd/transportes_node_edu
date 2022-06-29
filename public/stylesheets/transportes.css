@@ -1,0 +1,386 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    /*base*/
+    line-height: 20px;
+}
+
+header {
+    background-color: #2e64a1;
+    padding: 16px 0;
+    box-sizing: border-box;
+}
+
+header h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 100;
+    font-style: italic;
+    display: inline-block;
+    /*que trabaje en linea con el logo*/
+    position: relative;
+    /*para que el header de transportes suba un poco*/
+    bottom: 35px;
+    margin-left: 10px;
+    /*parqa separar un poco del logo*/
+}
+
+header img{
+    margin-left: 25px;
+}
+
+
+nav {
+    background-color: #6da9ed;
+    margin-bottom: 20px;
+    /*margen abajo del nav separación entre imagen y botonera*/
+
+
+
+}
+
+nav ul {
+    /* UL contenedor - LI son los hijos*/
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /*el felx me da libertad de movimiento*/
+
+
+}
+
+nav ul li {
+
+    flex-grow: 1;
+
+    /* siempre que use FLEX - La propiedad flex-grow de CSS especifica el factor de crecimiento de un elemento flexible (que tiene asignado display:flex),
+    en su dirección principal.*/
+
+}
+
+nav ul li a {
+    /*apuntar ul li a es más ordenado  */
+    color: white;
+    text-decoration: none;
+    padding: 6px 6px;
+    display: block;
+    text-align: center;
+
+}
+
+nav ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+footer {
+    background-color: #ccc;
+    clear: both;
+    /*siempre que usamos footer - el pie hace un enter y se pone al final de todo*/
+    color: #333;
+    text-align: center;
+    padding: 10px 0;
+    /* 3rem 0   con respecto al body con el margen por defecto q siempre es 16*/
+    
+    margin-top: 20px;
+}
+
+nav ul li a.activo {
+    /*cuando hay mucha cantidad del mismo elemento se pega elemento y clase a.activo*/
+    background-color: #4c76a5;
+}
+
+/*
+.activo{
+    background-color: green;
+}
+*/
+
+
+.holder {
+    /*CONTENIDO EN EL MEDIO*/
+    max-width: 960px;
+    margin: 0 auto;
+
+}
+
+
+
+h2 {
+    color: #2e64a1;
+    font-weight: 400;
+}
+
+
+
+/* *******************************inicio home*/
+
+.bienvenidos {
+    width: 75%;
+    padding-right: 10px;
+    box-sizing: border-box;
+    /* cuando se usa un ancho y un padding siempre usar boxisizing - para que no se rompa el diseño si se llega agrandar algo */
+}
+
+.testimonios {
+    width: 25%;
+}
+
+.columnas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bienvenidos p {
+    /*todas las p de bienvenidos*/
+    font-size: 20px;
+}
+
+.testimonio {
+    background-color: lightgrey;
+    padding: 16px;
+}
+
+.testimonio .cita {
+    background-color: yellow;
+    /*sACRRRRRRRRRRRRRRRRRRRRRRRRRR*/
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+    display: block;
+    /* o inline-block -  funciona como caja hace que lo otro Juan GOmez-----  corrra abajo*/
+
+}
+
+
+.testimonio .autor {
+    background-color: pink;
+    /*sACRRRRRRRRRRRRRRRRRRRRRRRRRR*/
+    font-size: 10px;
+    display: block;
+    text-align: center;
+    margin: 12px 0;
+}
+
+/* ************************************fin home*/
+
+/*inicio nosotros***********************************/
+
+.historia p {
+    font-size: 12px;
+    /*0.8rem*/
+}
+
+.personas {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.persona {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 18%;
+    text-align: center;
+    padding: 15px; /* el padding siempre suma a lo que hay*/
+    box-sizing: border-box;
+    /*cuando hay paddun se pone box*/
+}
+
+.persona img {
+    max-width: 60%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.personas h5,
+h6 {
+    /*tambien pueden ir con separado uno debajo del otro*/
+    margin: 0;
+    font-weight: normal;
+    color: #2e6441;
+}
+
+.persona h5 {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.persona h6 {
+    font-size: 13px;
+    font-style: italic;
+}
+
+.persona p {
+    color: #666;
+    font-size: 12px;
+    text-align: left;
+}
+
+
+
+/*fin nosotros****************************************/
+
+
+/* Inicio de servicios*/
+
+.servicio{
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 16px 0;
+    /*box-sizing: border-box;*/
+    display: flex;
+    gap: 30px;  /* hace como calles en medio y separa un elemento y otro */
+    align-items: center; /* lo su oapara frenar que no se deforme las imagenes en vertical*/
+
+
+}
+
+.servicio .info h4{
+    color: #2e64a1;
+    font-weight: 500;
+    font-style: italic;
+    border-bottom: 1px solid #2e64a1;
+    padding-bottom: 6px;
+}
+
+.servicio .info p{
+    font-size: 13px;
+    line-height: 20px;
+}
+
+.servicio img {
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    display: block;
+    max-width: 225px;
+
+}
+    
+
+.servicio:nth-child(2n+2){
+    background-color: rgb(245, 245, 245);
+    flex-direction: row-reverse;
+}
+
+/* fin de servicios */
+
+/*
+.persona:nth-child(2n+1){            cada 2 hijos el siguiente es celeste
+    background-color: lightblue;
+}
+*/
+
+
+/******************* GELERIA ************************/
+
+
+.galeria{
+    display: flex;
+    flex-wrap: wrap; /** hace el desbordamiento de las iamgenes hacia abajo*/
+    justify-content: flex-start;
+   
+}
+
+
+.galeria img{
+    padding: 5px;
+    border: 1px solid #999;
+    width: 18%;
+    margin-bottom: 5px;
+    margin-right: 2%;
+    box-sizing: border-box;
+}
+
+.galeria img:nth-child(3){
+    background-color: aqua;
+    border: none;
+}
+
+/************** FIN DE  GELERIA *********************/
+
+
+
+
+
+/*************INICIO CONTACTO*******************/
+
+
+.contacto{
+    display: flex;
+    gap: 24px; /* ME HACE UN ESPACIO*/
+}
+.contacto div{
+    width: 100%;
+    background-color: yellow;
+ 
+}
+
+.contacto .datos{
+    background-color: orange;
+}
+
+.datos p{
+    font-size: 14px;
+    }
+
+.datos ul li{
+        font-size: 13px;
+}
+
+
+
+.formulario p{
+    display: flex;
+}
+
+.formulario p label{
+    min-width: 90px;
+    background-color: gray;
+    display: flex;
+    align-items: center;
+}
+
+.formulario p input,
+.formulario p textarea{
+width: 100%;
+background-color: #ddd;
+border-radius: 5px;
+border: 1px solid #999;
+font-size: 14px;
+padding: 6px 10px;
+}
+
+.formulario p textarea{
+    height: 150px;
+    resize: none;
+}
+
+/*.mensajetex p:nth-child(4){
+    align-items: flex-start;
+}*/ /*EN CASO QUE SEA EL  ULTIMO HIJO*/
+
+.mensajetext {
+    align-items: flex-start;
+}
+/*pero como puedo agregar más campos me sirve esto*/
+
+.formulario input[type="submit"]{
+    background-color: #6da9ed;
+    box-shadow: 0 0 0 10px rgba (0,0,0,0,4);
+    color: white;
+    font-size: 16px;
+    padding: 6px 20px;
+    width: auto;
+    position: relative; /*para que la cajita siga a las otras pajas y sea relativo al anterior*/
+    left: 90px;
+    cursor: pointer;  /*pone la manito*/
+}
+
+.formulario input[type="submit"]:hover{
+background-color: #2e64a1;
+}
+/*************FIN CONTACTO*******************/

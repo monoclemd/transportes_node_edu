@@ -1,10 +1,64 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANSPORTES X 2022</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="stylesheets/normalize.css">
+    <link rel="stylesheet" href="stylesheets/transportes.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="holder">
+            <!-- aquí si porque quiero que se centre el header -->
+            <img src="images/logo.png" alt="logo" width="100px">
+            <h1>Transportes X</h1>
+        </div>
+    </header>
+
+
+    <nav>
+        <ul class="holder">
+            <!-- aquí si porque quiero que se centre el navegador -->
+
+            <li><a class="{{#if isHome}}activo{{/if}}" href="/">HOME</a>  </li> 
+            <li><a class="{{#if isNosotros}}activo{{/if}}" href="/nosotros">NOSOTROS</a> </li>
+            <li><a class="{{#if isServicios}}activo{{/if}}" href="/servicios">SERVICIOS</a> </li>
+            <li><a class="{{#if isGaleria}}activo{{/if}}" href="/galeria">GALERIA</a> </li>
+            <li><a class="{{#if isNovedades}}activo{{/if}}" href="/novedades">NOVEDADES</a> </li>
+            <li><a class="{{#if isContacto}}activo{{/if}}" href="/contacto">CONTACTO</a> </li>
+
+        </ul>
+    </nav>
+
+
+    <main class="holder">
+    
     {{{body}}}
-  </body>
+  
+
+
+
+  </main>
+
+
+    <footer>
+        <!-- aquí NO HAY HOLDER porque el contenido está en el medio, si tuviese algo a los costados SI -->
+        <p>Diseñador por Monocle.MD</p>
+    </footer>
+
+
+
+</body>
+
 </html>
