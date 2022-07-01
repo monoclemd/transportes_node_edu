@@ -2,29 +2,29 @@
     <div>
         <h2>Contacto rápido</h2>
 
-        <form action="method" class="formulario">
+        <form action="/contacto" method="post" class="formulario">
 
             <p>
                 <label for="">nombre</label>
-                <input type="text">
+                <input type="text" name="nombre">
             </p>
 
             <p>
                 <label for="">email</label>
-                <input type="email">
+                <input type="email" name="email">
             </p>
 
 
             <p>
                 <label for="">teléfono</label>
-                <input type="text">
+                <input type="text" name="tel">
             </p>
 
 
 
             <p class="mensajetext">
                 <label for="">Mensaje</label>
-                <textarea name="" id=""></textarea>
+                <textarea name="comentarios" id=""></textarea>
             </p>
 
             <p>
@@ -35,6 +35,8 @@
 
 
         </form>
+
+        <p>{{message}}</p>
 
     </div>
 
