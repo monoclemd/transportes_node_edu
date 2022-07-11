@@ -33,14 +33,19 @@
                     </tr>
                 </thead>
                 <tbody>
+
+                     {{#each novedades}}     {{!-- -------- lo que se va a repetir --}}
+
                     <tr>
-                        <th scope="row">1</th>
-                        <td>Título</td>
-                        <td class="text-end">Otto
+                        <th scope="row">{{id}}</th>  {{!-- nombre de la comlumna de la tabla --}}
+                        <td>{{titulo}}</td>
+                        <td class="text-end">
                             <a href="" class="btn btn-secondary"><i class="fa-solid fa-pencil"></i></a> {{!-- MODIFICAR --}}
-                            <a href="" class="btn btn-secondary"><i class="fa-solid fa-trash"></i></a> </td> {{!-- MODIFICAR --}}
+                            <a href="" class="btn btn-secondary"><i class="fa-solid fa-trash"></i></a> </td> {{!-- ELIMINAR --}}
                     </tr>
                     
+                    {{/each}}    {{!-- -------- FIN DE lo que se va a repetir --}}
+
                 </tbody>
             </table>
 
