@@ -13,4 +13,6 @@ pool.query = util.promisify(pool.query);
 
 module.exports = pool;
 
+//s en export siempre
+
 
