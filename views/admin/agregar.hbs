@@ -12,19 +12,22 @@
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Subtítulo</label>
-                    <textarea class="form-control" rows="3" name="subtitulo"> </textarea>
+                    <textarea class="form-control" rows="3" name="subtitulo"></textarea>
                 </div>
 
-                 <div class="mb-3">
+                <div class="mb-3">
                     <label class="form-label">Cuerpo</label>
-                    <textarea class="form-control" rows="3" name="Cuerpo"> </textarea>
+                    <textarea class="form-control" rows="3" name="cuerpo"></textarea>
                 </div>
 
                 <div class="col-auto">
                     <button type="submit" class="btn btn-primary mb-3">Guardar</button>
                 </div>
             </form>
-            
+            {{#if error}}
+                <p>{{message}}</p>
+            {{/if}}
+
         </div>
 
     </div>
