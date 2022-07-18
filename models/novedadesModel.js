@@ -45,9 +45,14 @@ async function modificarNovedadByID(obj,id){
     }
 }
 
+async function buscarNovedades(busqueda){
+    var query = 'select * from novedades where titulo like ? OR subtitulo like ? OR cuerpo like ?';
+    var rows = await pool.query(query,['%' + busqueda + '%', '%' + busqueda + '%','%' + busqueda + '%',]);
+    return rows
+}
 
 
-module.exports = { getNovedades, insertNovedades, deleteNovedadByID, getNovedadesByID, modificarNovedadByID }
+module.exports = { getNovedades, insertNovedades, deleteNovedadByID, getNovedadesByID, modificarNovedadByID, buscarNovedades }
 
 
 //try - catch: ayuda el manejo de ersrores (si el cod no entiedne algo va a tirar ERROR)

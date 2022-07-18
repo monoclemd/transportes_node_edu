@@ -2,7 +2,8 @@
     {{!-- inicio fila 1 --}}
     <div class="row">
         <div class="col">
-            <p class="text-end">Hola {{persona}} ! <a href="/admin/login/logout" class="btn btn-danger">Cerrar sesión <i class="fa-solid fa-right-from-bracket"></i></a></p>
+            <p class="text-end">Hola {{persona}} ! <a href="/admin/login/logout" class="btn btn-danger">Cerrar sesión <i
+                        class="fa-solid fa-right-from-bracket"></i></a></p>
         </div>
     </div>
     {{!-- fin fila 1 --}}
@@ -13,9 +14,20 @@
         <div class="col-7">
             <h2>Listado de novedades</h2>
         </div>
-        <div class="col-5 text-end">
+        <div class="col-2 text-end">
             <a href="/admin/novedades/agregar" class="btn btn-success"> <i class="fa-solid fa-plus"></i> Nuevo </a>
         </div>
+
+        <div class="col-3 text-end">
+            <form action="/admin/novedades" method="get" class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" name="q" {{#if
+                    1}} value="{{q}}" {{/if}}>
+                <button type="submit" class="btn btn-secondary"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+
+        </div>
+
+
     </div>
     {{!-- fin fila 2 --}}
 
@@ -33,20 +45,32 @@
                 </thead>
                 <tbody>
 
-                     {{#each novedades}}     {{!-- -------- lo que se va a repetir --}}
+                    {{#each novedades}} {{!-- -------- lo que se va a repetir --}}
 
                     <tr>
-                        <th scope="row">{{id}}</th>  {{!-- nombre de la comlumna de la tabla --}}
+                        <th scope="row">{{id}}</th> {{!-- nombre de la comlumna de la tabla --}}
                         <td>{{titulo}}</td>
                         <td class="text-end">
-                            <a href="/admin/novedades/modificar/{{id}}" class="btn btn-secondary"><i class="fa-solid fa-pencil"></i></a> {{!-- MODIFICAR --}}
-                            <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-secondary"><i class="fa-solid fa-trash"></i></a> </td> {{!-- ELIMINAR --}}
+                            <a href="/admin/novedades/modificar/{{id}}" class="btn btn-secondary"><i
+                                    class="fa-solid fa-pencil"></i></a> {{!-- MODIFICAR --}}
+                            <a href="/admin/novedades/eliminar/{{id}}" class="btn btn-secondary"><i
+                                    class="fa-solid fa-trash"></i></a>
+                        </td> {{!-- ELIMINAR --}}
                     </tr>
-                    
-                    {{/each}}    {{!-- -------- FIN DE lo que se va a repetir --}}
+
+                    {{/each}} {{!-- -------- FIN DE lo que se va a repetir --}}
 
                 </tbody>
             </table>
+
+
+       
+
+            {{#if is_search}}
+            {{#unless novedades.length}}
+            <p>No se encontraron resultados para <b> "{{q}}"</b></p>
+            {{/unless}}
+            {{/if}}
 
         </div>
 
